@@ -44,4 +44,4 @@ target_link_libraries(qjson_backport_test
 )
 
 
-add_custom_target(check qjson_test)
+add_custom_target(check qjson_backport_test)
