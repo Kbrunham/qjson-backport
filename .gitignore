@@ -3,3 +3,7 @@ qjson.pro.user
 Makefile
 libqjson-backport.*
 *.o
+CMakeFiles
+CMakeCache.txt
+cmake_install.cmake
+qjson_backport_test
