@@ -12,7 +12,7 @@ find_package(Qt4 REQUIRED QtCore QtXml)
 include(${QT_USE_FILE})
 
 # Add the lib
-add_library(qjsonlib SHARED
+add_library(qjson-backport SHARED
 	qjson.cpp
 	qjsonarray.cpp
 	qjsondocument.cpp
@@ -23,7 +23,7 @@ add_library(qjsonlib SHARED
 	)
 
 # Add the executable target 
-add_executable(qjson_test
+add_executable(qjson_backport_test
     main.cpp
 )
 
@@ -34,12 +34,12 @@ include_directories(
 	${QT_HEADERS_DIR}
 )
 
-target_link_libraries(qjsonlib
+target_link_libraries(qjson-backport
 	${QT_LIBRARIES}
 )
 
-target_link_libraries(qjson_test
-	qjsonlib
+target_link_libraries(qjson_backport_test
+	qjson-backport
 	${GTEST_LIBRARIES}
 )
 
